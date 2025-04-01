@@ -1,0 +1,5 @@
+#wlwhsxz 계정에 대한 SSH 설정
+Host github.com-wlwhsxz
+    HostName github.com
+    User wlwhsxz@gmail.com
+    IdentityFile ~/.ssh/minu
