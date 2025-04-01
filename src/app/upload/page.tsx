@@ -25,13 +25,10 @@ export default function UploadPage() {
     formData.append("file", imageFile);
 
     try {
-      const res = await fetch(
-        process.env.NEXT_PUBLIC_FLASK_API_URL + "/api/convert",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const res = await fetch("/api/convert", {
+        method: "POST",
+        body: formData,
+      });
 
       if (!res.ok) throw new Error("이미지 변환 실패");
 
