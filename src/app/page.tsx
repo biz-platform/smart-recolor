@@ -25,7 +25,7 @@ export default function Home() {
     formData.append("file", imageFile);
 
     try {
-      const res = await fetch("/api/convert", {
+      const res = await fetch("http://localhost:5000/api/convert", {
         method: "POST",
         body: formData,
       });
