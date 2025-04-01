@@ -16,6 +16,9 @@
       "dest": "api/convert.py"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
       "dest": "/"
     }
