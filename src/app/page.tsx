@@ -25,15 +25,10 @@ export default function Home() {
     formData.append("file", imageFile);
 
     try {
-      const res = await fetch(
-        `${
-          process.env.NODE_ENV === "development" ? "http://localhost:5000" : ""
-        }/api/convert`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const res = await fetch("/api/convert", {
+        method: "POST",
+        body: formData,
+      });
 
       if (!res.ok) throw new Error("이미지 변환 실패");
 
